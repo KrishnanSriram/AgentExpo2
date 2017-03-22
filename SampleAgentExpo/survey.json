@@ -1,0 +1,183 @@
+{
+  "polls": [{
+    "title": "Wireless Security",
+    "id": "wireless",
+    "details": {
+      "title": "QUESTION ONE",
+      "question": "Does your agency use good wireless security practices?",
+      "choices": [{
+        "id": "A",
+        "choice": "We provide VPN service for mobile users, we turn off file sharing, and we only use public Wi-Fi when absolutely necessary.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We don’t always use VPN or check the hotspot before we use free public wireless networks.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We don’t have a good handle on wireless security practices and staff needs more security awareness when traveling.",
+        "weight": "0"
+      }]
+    }
+  }, {
+    "title": "Security plan & Policies",
+    "id": "securityplan",
+    "details": {
+      "title": "QUESTION TWO",
+      "question": "Does your agency have a written security plan and the appropriate security polies in place?",
+      "choices": [{
+        "id": "A",
+        "choice": "We have a written security plan and the appropriate security policies (e.g., password complexity, acceptable use).",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We have security plan but it’s not documented and we need to improve some of our security policies.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We don’t have a written security plan or any documented security policies.",
+        "weight": "10"
+      }]
+    }
+  }, {
+    "title": "Anti-Virus Software",
+    "id": "antivirus",
+    "details": {
+      "title": "QUESTION THREE",
+      "question": "Does your agency keep anti-virus and other software updated constantly?",
+      "choices": [{
+        "id": "A",
+        "choice": "We have a patch management process in place (and in effect) and routinely run basic scans.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We update tools sporadically and do not run routine scans.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We have tools and systems (including anti- virus programs) that are probably out of date.",
+        "weight": "0"
+      }]
+    }
+  }, {
+    "title": "Accounts & Passwords audit",
+    "id": "accountaudits",
+    "details": {
+      "title": "QUESTION FOUR",
+      "question": "Does your agency audit user accounts and change passwords when someone leaves?",
+      "choices": [{
+        "id": "A",
+        "choice": "We routinely review user accounts to be sure they are valid, necessary, and configured properly with appropriate privileges.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We will revoke system privileges and change passwords when an employee is fired.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We do not monitor user accounts and have not removed all former employees from the system.",
+        "weight": "0"
+      }]
+    }
+  }, {
+    "title": "Traffic Monitor",
+    "id": "networkmonitor",
+    "details": {
+      "title": "QUESTION FIVE",
+      "question": "Does your agency monitor and filter network traffic?",
+      "choices": [{
+        "id": "A",
+        "choice": "We monitor all outbound traffic and have a system in place to alert us to anything unusual.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We have a system in place to track outbound traffic but it is not consistently monitored.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We do not have a system in place to monitor outbound network traffic.",
+        "weight": "0"
+      }]
+    }
+  }, {
+    "title": "Storage Media Policies",
+    "id": "removablemedia",
+    "details": {
+      "title": "QUESTION SIX",
+      "question": "Does your agency manage removable media?",
+      "choices": [{
+        "id": "A",
+        "choice": "We only use removable media to store or transfer information as a last resort. When we use it, we encrypt the data and we educate staff and limit access.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We limit the use of removable media but we don’t always encrypt the data and we don’t don’t always record the access.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We don’t limit the use of removable media and we don’t secure the data on the removable media drives.",
+        "weight": "0"
+      }]
+    }
+  }, {
+    "title": "Password Policies",
+    "id": "passwords",
+    "details": {
+      "title": "QUESTION SEVEN",
+      "question": "Does your agency require strong passwords?",
+      "choices": [{
+        "id": "A",
+        "choice": "We use an automated system to enforce the use of complex passwords. Staff have access to a Password Manager.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We require complex passwords and we use a Password Manager but it’s not enforced or automated.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We no not require complex passwords or force staff to change their passwords on a regular interval. We don’t use Password Managers or Multi-Factor authentication.",
+        "weight": "0"
+      }]
+    }
+  }, {
+    "title": "Mobile device Security",
+    "id": "mobilesecurity",
+    "details": {
+      "title": "QUESTION EIGHT",
+      "question": "Does your agency apply security practices to it’s mobile devices?",
+      "choices": [{
+        "id": "A",
+        "choice": "We have an MDM, we use Anti-Virus on non iPhone devices, we encrypt devices and we require passwords to unlock.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We have some security features in place but they aren’t automated or consistently enforced.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We probably have mobile devices that need updates and aren’t secured.",
+        "weight": "0"
+      }]
+    }
+  }, {
+    "title": "Security Trainning",
+    "id": "securitytraining",
+    "details": {
+      "title": "QUESTION NINE",
+      "question": "Does your agency have an established security awareness training program and maintain user awareness throughout the year?",
+      "choices": [{
+        "id": "A",
+        "choice": "We provide quarterly awareness training and information to our staff.",
+        "weight": "100"
+      }, {
+        "id": "B",
+        "choice": "We provide awareness information or training but not both.",
+        "weight": "10"
+      }, {
+        "id": "C",
+        "choice": "We don’t provide any security awareness training.",
+        "weight": "0"
+      }]
+    }
+  }]
+}

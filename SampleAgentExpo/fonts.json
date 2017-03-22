@@ -1,0 +1,52 @@
+{
+       "fonts": [{
+              "fontType": "headerFont",
+              "details": {
+                     "name": "HelveticaNeue",
+                     "size": 30,
+                     "style": "Light"
+              }
+       }, {
+              "fontType": "bodyFont",
+              "details": {
+                     "name": "HelveticaNeue",
+                     "size": 16,
+                     "style": "Light"
+              }
+       }, {
+              "fontType": "buttonFont",
+              "details": {
+                     "name": "HelveticaNeue",
+                     "size": 15,
+                     "style": "Light"
+              }
+       }, {
+              "fontType": "modalTitleFont",
+              "details": {
+                     "name": "HelveticaNeue",
+                     "size": 20,
+                     "style": "Light"
+              }
+       }, {
+              "fontType": "tableSectionHeaderFont",
+              "details": {
+                     "name": "HelveticaNeue",
+                     "size": 20,
+                     "style": "CondensedBlack"
+              }
+       }, {
+              "fontType": "tableCellTextFont",
+              "details": {
+                     "name": "HelveticaNeue",
+                     "size": 15,
+                     "style": "Light"
+              }
+       }, {
+              "fontType": "tableSectionFooterFont",
+              "details": {
+                     "name": "HelveticaNeue",
+                     "size": 20,
+                     "style": "Thin"
+              }
+       }]
+}
