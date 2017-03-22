@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import AWSCore
+import AWSMobileAnalytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.applicationManager = ApplicationManager.sharedInstance
         self.applicationManager.loadPollInformation()
         
-        return true
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "us-east-1:3b834ec3-9056-4cba-8063-8440a44a70cf")
+        //Amazon Cognito Identity Pool ID
+        let serviceConfiguration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialsProvider)
+        let analyticsConfiguration = AWSMobileAnalyticsConfiguration()
+        analyticsConfiguration.serviceConfiguration = serviceConfiguration
+        _ = AWSMobileAnalytics(forAppId: "391a0421b54941bea84102a26daddc33",
+                               configuration: analyticsConfiguration)
+        
+        AWSLogger.default().logLevel = .verbose
+        
+        return AWSMobileClient.sharedInstance.didFinishLaunching(application, withOptions: launchOptions)
+//        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,6 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        AWSMobileClient.sharedInstance.applicationDidBecomeActive(application)
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

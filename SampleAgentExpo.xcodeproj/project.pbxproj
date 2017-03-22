@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0227BF761E82DD020015AA73 /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF451E82DAD70015AA73 /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0227BF771E82DD020015AA73 /* AWSDynamoDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF461E82DAD70015AA73 /* AWSDynamoDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0227BF781E82DD020015AA73 /* AWSMobileAnalytics.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF4F1E82DAD70015AA73 /* AWSMobileAnalytics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0227BF791E82DDA70015AA73 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF451E82DAD70015AA73 /* AWSCore.framework */; };
+		0227BF7A1E82DDA70015AA73 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF461E82DAD70015AA73 /* AWSDynamoDB.framework */; };
+		0227BF7B1E82DDA70015AA73 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF4F1E82DAD70015AA73 /* AWSMobileAnalytics.framework */; };
+		0227BF7E1E82DDD10015AA73 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227BF7D1E82DDD10015AA73 /* AWSMobileClient.swift */; };
+		0227BF801E82DDF10015AA73 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF7F1E82DDF10015AA73 /* AWSMobileHubHelper.framework */; };
 		02876FBF1E78CEC4003AF55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02876FBE1E78CEC4003AF55C /* AppDelegate.swift */; };
 		02876FC11E78CEC4003AF55C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02876FC01E78CEC4003AF55C /* ViewController.swift */; };
 		02876FC41E78CEC4003AF55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02876FC21E78CEC4003AF55C /* Main.storyboard */; };
@@ -37,6 +45,10 @@
 		029AB3571E81E722008A307B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AB3561E81E722008A307B /* ResultsViewController.swift */; };
 		029AB3591E81E7A9008A307B /* SFGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AB3581E81E7A9008A307B /* SFGaugeView.swift */; };
 		029AB35B1E81FC75008A307B /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029AB35A1E81FC75008A307B /* DismissAnimator.swift */; };
+		02A6F3661E82DE5900A05C15 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A6F3621E82DE5900A05C15 /* Contacts.swift */; };
+		02A6F3671E82DE5900A05C15 /* ContactsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A6F3631E82DE5900A05C15 /* ContactsTable.swift */; };
+		02A6F3681E82DE5900A05C15 /* NoSQLModelHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A6F3641E82DE5900A05C15 /* NoSQLModelHelpers.swift */; };
+		02A6F3691E82DE5900A05C15 /* NoSQLSampleDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A6F3651E82DE5900A05C15 /* NoSQLSampleDataGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +75,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0227BF761E82DD020015AA73 /* AWSCore.framework in Embed Frameworks */,
+				0227BF771E82DD020015AA73 /* AWSDynamoDB.framework in Embed Frameworks */,
+				0227BF781E82DD020015AA73 /* AWSMobileAnalytics.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +85,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0227BF451E82DAD70015AA73 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSCore.framework; sourceTree = "<group>"; };
+		0227BF461E82DAD70015AA73 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSDynamoDB.framework; sourceTree = "<group>"; };
+		0227BF4F1E82DAD70015AA73 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileAnalytics.framework; sourceTree = "<group>"; };
+		0227BF7D1E82DDD10015AA73 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
+		0227BF7F1E82DDF10015AA73 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
 		02876FBB1E78CEC4003AF55C /* SampleAgentExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAgentExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02876FBE1E78CEC4003AF55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02876FC01E78CEC4003AF55C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +126,10 @@
 		029AB3561E81E722008A307B /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		029AB3581E81E7A9008A307B /* SFGaugeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFGaugeView.swift; sourceTree = "<group>"; };
 		029AB35A1E81FC75008A307B /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
+		02A6F3621E82DE5900A05C15 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		02A6F3631E82DE5900A05C15 /* ContactsTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactsTable.swift; path = ../Models/ContactsTable.swift; sourceTree = "<group>"; };
+		02A6F3641E82DE5900A05C15 /* NoSQLModelHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoSQLModelHelpers.swift; path = ../Models/NoSQLModelHelpers.swift; sourceTree = "<group>"; };
+		02A6F3651E82DE5900A05C15 /* NoSQLSampleDataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoSQLSampleDataGenerator.swift; path = ../Models/NoSQLSampleDataGenerator.swift; sourceTree = "<group>"; };
 		628C741A0F134A8C24224FA3 /* Pods_SampleAgentExpo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleAgentExpo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -114,7 +138,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0227BF801E82DDF10015AA73 /* AWSMobileHubHelper.framework in Frameworks */,
 				029AB3551E81A675008A307B /* QuartzCore.framework in Frameworks */,
+				0227BF791E82DDA70015AA73 /* AWSCore.framework in Frameworks */,
+				0227BF7A1E82DDA70015AA73 /* AWSDynamoDB.framework in Frameworks */,
+				0227BF7B1E82DDA70015AA73 /* AWSMobileAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +163,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0227BF7C1E82DDC80015AA73 /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				0227BF7D1E82DDD10015AA73 /* AWSMobileClient.swift */,
+				02A6F3631E82DE5900A05C15 /* ContactsTable.swift */,
+				02A6F3641E82DE5900A05C15 /* NoSQLModelHelpers.swift */,
+				02A6F3651E82DE5900A05C15 /* NoSQLSampleDataGenerator.swift */,
+			);
+			path = AWS;
+			sourceTree = "<group>";
+		};
 		02876FB21E78CEC4003AF55C = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +198,11 @@
 		02876FBD1E78CEC4003AF55C /* SampleAgentExpo */ = {
 			isa = PBXGroup;
 			children = (
+				0227BF7C1E82DDC80015AA73 /* AWS */,
+				0227BF451E82DAD70015AA73 /* AWSCore.framework */,
+				0227BF461E82DAD70015AA73 /* AWSDynamoDB.framework */,
+				0227BF4F1E82DAD70015AA73 /* AWSMobileAnalytics.framework */,
+				0227BF7F1E82DDF10015AA73 /* AWSMobileHubHelper.framework */,
 				029AB33A1E802182008A307B /* Utilitiy */,
 				02876FF81E7A0521003AF55C /* survey.json */,
 				029AB3431E80817D008A307B /* fonts.json */,
@@ -205,6 +249,7 @@
 		02876FF01E7956E7003AF55C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02A6F3621E82DE5900A05C15 /* Contacts.swift */,
 				02876FFC1E7A1363003AF55C /* SurveyResponse.swift */,
 				02876FFA1E7A12C5003AF55C /* AgentSecurityDataManager.swift */,
 				02876FF21E79577B003AF55C /* Survey.swift */,
@@ -261,6 +306,7 @@
 				02876FB81E78CEC4003AF55C /* Frameworks */,
 				02876FB91E78CEC4003AF55C /* Resources */,
 				029AB3721E821169008A307B /* Embed Frameworks */,
+				0227BF721E82DAED0015AA73 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -382,20 +428,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0227BF721E82DAED0015AA73 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "Shell /bin/sh\n\nbash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02876FB71E78CEC4003AF55C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				02876FFB1E7A12C5003AF55C /* AgentSecurityDataManager.swift in Sources */,
+				02A6F3681E82DE5900A05C15 /* NoSQLModelHelpers.swift in Sources */,
 				029AB3461E80865B008A307B /* DataManager.swift in Sources */,
 				029AB3591E81E7A9008A307B /* SFGaugeView.swift in Sources */,
 				02876FF51E795785003AF55C /* Poll.swift in Sources */,
 				029AB3571E81E722008A307B /* ResultsViewController.swift in Sources */,
 				02876FC11E78CEC4003AF55C /* ViewController.swift in Sources */,
+				0227BF7E1E82DDD10015AA73 /* AWSMobileClient.swift in Sources */,
 				029AB3481E809572008A307B /* AEFont.swift in Sources */,
+				02A6F3661E82DE5900A05C15 /* Contacts.swift in Sources */,
 				029AB34C1E80A0F6008A307B /* BaseViewController.swift in Sources */,
 				02876FFF1E7A2168003AF55C /* PollChoiceDetails.swift in Sources */,
+				02A6F3671E82DE5900A05C15 /* ContactsTable.swift in Sources */,
 				02876FF31E79577B003AF55C /* Survey.swift in Sources */,
 				02876FFD1E7A1363003AF55C /* SurveyResponse.swift in Sources */,
 				02876FF71E7958CF003AF55C /* SurveyTableViewController.swift in Sources */,
@@ -406,6 +472,7 @@
 				02876FBF1E78CEC4003AF55C /* AppDelegate.swift in Sources */,
 				029AB35B1E81FC75008A307B /* DismissAnimator.swift in Sources */,
 				029AB3401E8021A4008A307B /* FontManager.swift in Sources */,
+				02A6F3691E82DE5900A05C15 /* NoSQLSampleDataGenerator.swift in Sources */,
 				028770011E7AA633003AF55C /* PollDetails.swift in Sources */,
 				029AB33E1E80219A008A307B /* ThemeManager.swift in Sources */,
 				029AB34E1E819F9D008A307B /* BubbleTransition.swift in Sources */,
@@ -563,7 +630,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/SampleAgentExpo/AmazonAws",
+					"$(PROJECT_DIR)/SampleAgentExpo",
 				);
 				INFOPLIST_FILE = SampleAgentExpo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -582,7 +649,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/SampleAgentExpo/AmazonAws",
+					"$(PROJECT_DIR)/SampleAgentExpo",
 				);
 				INFOPLIST_FILE = SampleAgentExpo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

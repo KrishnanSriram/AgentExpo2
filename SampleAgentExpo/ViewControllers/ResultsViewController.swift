@@ -76,17 +76,17 @@ class ResultsViewController: UIViewController {
             alert -> Void in
             
             let firstTextField = alertController.textFields![0] as UITextField
-//            let contactsTable = ContactsTable()
-//            contactsTable.insertEMailItemWithCompletionHandler(email: firstTextField.text!,
-//                                                               score: self.score,
-//                                                               status: "New",
-//                                                               completionHandler: { (error) in
-//                if error != nil {
-//                    debugPrint(error!.description)
-//                } else {
-//                    debugPrint("Data is now persisted")
-//                }
-//            })
+            let contactsTable = ContactsTable()
+            contactsTable.insertEMailItemWithCompletionHandler(email: firstTextField.text!,
+                                                               score: self.score,
+                                                               status: "New",
+                                                               completionHandler: { (error) in
+                if error != nil {
+                    debugPrint(error!.description)
+                } else {
+                    debugPrint("Data is now persisted")
+                }
+            })
             
         })
         
