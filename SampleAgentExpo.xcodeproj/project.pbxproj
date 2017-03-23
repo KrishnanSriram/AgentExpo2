@@ -15,6 +15,8 @@
 		0227BF7B1E82DDA70015AA73 /* AWSMobileAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF4F1E82DAD70015AA73 /* AWSMobileAnalytics.framework */; };
 		0227BF7E1E82DDD10015AA73 /* AWSMobileClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0227BF7D1E82DDD10015AA73 /* AWSMobileClient.swift */; };
 		0227BF801E82DDF10015AA73 /* AWSMobileHubHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0227BF7F1E82DDF10015AA73 /* AWSMobileHubHelper.framework */; };
+		0233CF541E834A2700228AC7 /* ImageLabelTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0233CF531E834A2700228AC7 /* ImageLabelTableSectionHeaderView.swift */; };
+		0233CF561E834A5300228AC7 /* ImageLabelTableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0233CF551E834A5300228AC7 /* ImageLabelTableSectionHeaderView.xib */; };
 		02876FBF1E78CEC4003AF55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02876FBE1E78CEC4003AF55C /* AppDelegate.swift */; };
 		02876FC11E78CEC4003AF55C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02876FC01E78CEC4003AF55C /* ViewController.swift */; };
 		02876FC41E78CEC4003AF55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02876FC21E78CEC4003AF55C /* Main.storyboard */; };
@@ -90,6 +92,8 @@
 		0227BF4F1E82DAD70015AA73 /* AWSMobileAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileAnalytics.framework; sourceTree = "<group>"; };
 		0227BF7D1E82DDD10015AA73 /* AWSMobileClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSMobileClient.swift; sourceTree = "<group>"; };
 		0227BF7F1E82DDF10015AA73 /* AWSMobileHubHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AWSMobileHubHelper.framework; sourceTree = "<group>"; };
+		0233CF531E834A2700228AC7 /* ImageLabelTableSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLabelTableSectionHeaderView.swift; sourceTree = "<group>"; };
+		0233CF551E834A5300228AC7 /* ImageLabelTableSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageLabelTableSectionHeaderView.xib; sourceTree = "<group>"; };
 		02876FBB1E78CEC4003AF55C /* SampleAgentExpo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleAgentExpo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02876FBE1E78CEC4003AF55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02876FC01E78CEC4003AF55C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				029AB3581E81E7A9008A307B /* SFGaugeView.swift */,
+				0233CF531E834A2700228AC7 /* ImageLabelTableSectionHeaderView.swift */,
+				0233CF551E834A5300228AC7 /* ImageLabelTableSectionHeaderView.xib */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				TargetAttributes = {
 					02876FBA1E78CEC4003AF55C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4345WGKETF;
 						ProvisioningStyle = Automatic;
 					};
 					02876FD11E78CEC4003AF55C = {
@@ -407,6 +414,7 @@
 				02876FF91E7A0521003AF55C /* survey.json in Resources */,
 				02876FCC1E78CEC4003AF55C /* LaunchScreen.storyboard in Resources */,
 				02876FC91E78CEC4003AF55C /* Assets.xcassets in Resources */,
+				0233CF561E834A5300228AC7 /* ImageLabelTableSectionHeaderView.xib in Resources */,
 				02876FC41E78CEC4003AF55C /* Main.storyboard in Resources */,
 				029AB3441E80817D008A307B /* fonts.json in Resources */,
 			);
@@ -466,6 +474,7 @@
 				02876FFD1E7A1363003AF55C /* SurveyResponse.swift in Sources */,
 				02876FF71E7958CF003AF55C /* SurveyTableViewController.swift in Sources */,
 				029AB34A1E809800008A307B /* AEFontType.swift in Sources */,
+				0233CF541E834A2700228AC7 /* ImageLabelTableSectionHeaderView.swift in Sources */,
 				029AB3421E8021AE008A307B /* ColorManager.swift in Sources */,
 				02876FC71E78CEC4003AF55C /* SampleAgentExpo.xcdatamodeld in Sources */,
 				029AB33C1E80218E008A307B /* ApplicationManager.swift in Sources */,
@@ -627,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4345WGKETF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -646,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4345WGKETF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

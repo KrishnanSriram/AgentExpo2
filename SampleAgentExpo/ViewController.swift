@@ -186,6 +186,7 @@ extension ViewController: SurveySaveProtocol {
         let resultController = self.resultsViewController
         resultController.percentageValue = percentage
         resultController.score = resultStatus
+        resultController.pollResponse = self.pollResponse
         
         self.surveyIndex = -1
         self.navigationController?.pushViewController(resultController, animated: true)

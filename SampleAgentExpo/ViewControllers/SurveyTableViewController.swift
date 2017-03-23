@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AWSMobileAnalytics
 
 class SurveyTableViewController: UITableViewController {
     
@@ -31,6 +32,8 @@ class SurveyTableViewController: UITableViewController {
         self.isLastItem = false
         
         self.tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "ChoiceCell")
+        self.tableView.register(UINib(nibName: "ImageLabelTableSectionHeaderView", bundle: nil),
+                                forHeaderFooterViewReuseIdentifier: "ImageLabelHeader")
         self.navigationItem.leftBarButtonItem = prevBarButtonItem
         self.updateBarButtons()
         
@@ -57,14 +60,26 @@ class SurveyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let headerView = view as! UITableViewHeaderFooterView
-//        headerView.contentView.backgroundColor = UIColor(red: 46/255, green: 190/255, blue: 206/255, alpha: 1.0)
-        headerView.textLabel?.font = self.fontManager?.fontForName(name: "tableSectionHeaderFont")
+        view.alpha = 0.0
+        UIView.animate(withDuration: 2.0, animations: {
+            view.alpha = 1.0
+        })
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return self.poll.details.title
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ImageLabelHeader")
+        let header = cell as! ImageLabelTableSectionHeaderView
+        
+        header.label.text = self.poll.details.title
+        header.label.font = self.fontManager?.fontForName(name: "tableSectionHeaderFont")
+        header.imageView.image = UIImage(named: "Q" + String(self.dataDelegate.dataIndex() + 1))
+        
+        return header
     }
+    
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return self.poll.details.title
+//    }
     
     override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
         let footerView = view as! UITableViewHeaderFooterView
@@ -111,6 +126,8 @@ class SurveyTableViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.backgroundColor = UIColor(red: 41/255, green: 41/255, blue: 41/255, alpha: 1.0)
         let choiceDetails = self.poll.details.choices[indexPath.row]
+//        self.addToAnalytics(questionId: self.poll.id, choice: choiceDetails.choiceId)
+        
         self.surveyDelegate.saveSurvey(poll: self.poll, choiceId: choiceDetails.choiceId)
     }
     
@@ -148,7 +165,42 @@ class SurveyTableViewController: UITableViewController {
         
     }
     
-    // Utility methods
+    //MARK: - Support for mobile analytics
+    
+    func choiceToNumericValue(choice: String) -> Int {
+        if choice == "A" {
+            return 1
+        } else if choice == "B" {
+            return 2
+        } else if choice == "C" {
+            return 3
+        }
+        
+        return 0
+    }
+    
+    func addToAnalytics(questionId: String, choice: String) {
+        let eventClient = AWSMobileAnalytics(forAppId: "391a0421b54941bea84102a26daddc33").eventClient
+        
+        guard let client = eventClient else {
+            print("Error creating AMA event client")
+            return
+        }
+        
+        guard let event = client.createEvent(withEventType: "Achievement") else {
+            print("Error creating AMA event")
+            return
+        }
+        
+        event.addAttribute(choice, forKey: questionId)
+        event.addMetric(self.choiceToNumericValue(choice: choice) as NSNumber!,
+                        forKey: questionId)
+        client.record(event)
+        debugPrint("Recorded event")
+        client.submitEvents()
+    }
+    
+    //MARK: - Utility methods
     func updateBarButtons() {
         if self.isLastItem == true {
             self.navigationItem.rightBarButtonItem = submitBarButtonItem
@@ -159,6 +211,7 @@ class SurveyTableViewController: UITableViewController {
         }
     }
     
+    //MARK: - Animation support
     func animateTable() {
         tableView.reloadData()
         

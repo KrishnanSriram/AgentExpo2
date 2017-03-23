@@ -20,6 +20,7 @@ class Contacts: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     var _emailId: String?
     var _status: String?
     var _score: String?
+    var _detailedScore: String?
     
     class func dynamoDBTableName() -> String {
 
@@ -36,6 +37,7 @@ class Contacts: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
                "_emailId" : "email_id",
                "_status": "status",
                "_score":"score",
+               "_detailedScore":"detailedScore",
         ]
     }
 }

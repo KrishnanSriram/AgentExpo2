@@ -16,5 +16,9 @@ class SurveyResponse: NSObject {
         self.poll_id = pollId
         self.choice_id = choiceId
     }
+    
+    func toJSON() -> String {
+        return "{\"poll_id\":\"" + self.poll_id + "\", \"choice_id\":\"" + self.choice_id + "\"}"
+    }
 
 }

@@ -13,6 +13,7 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var topTachometer: SFGaugeView!
     var percentageValue: Int!
     var score: String!
+    var pollResponse: [SurveyResponse]!
     var actionToEnable: UIAlertAction?
     @IBOutlet weak var lowLabelTrailingConstraint: NSLayoutConstraint!
     @IBOutlet weak var highLabelTrailingConstraint: NSLayoutConstraint!
@@ -80,9 +81,10 @@ class ResultsViewController: UIViewController {
             contactsTable.insertEMailItemWithCompletionHandler(email: firstTextField.text!,
                                                                score: self.score,
                                                                status: "New",
+                                                               detailedScore: self.JSONResponseFromSurveyResults(contact: firstTextField.text!),
                                                                completionHandler: { (error) in
                 if error != nil {
-                    debugPrint(error!.description)
+                    self.persistResultsLocally(contact: firstTextField.text!)
                 } else {
                     debugPrint("Data is now persisted")
                 }
@@ -146,6 +148,45 @@ class ResultsViewController: UIViewController {
             self.bodyResultsLabel.text = "Keep up the great work and continue to remain vigilant about security risks as your agency grows and evolves."
             self.footerResultsLabel.text = "Try reading the relevant areas of our Agency Security Guide to find steps you can take to improve your agency security posture."
         }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
+    func newFileName() -> String {
+        let uuid = NSUUID().uuidString
+        return uuid + ".json"
+    }
+    
+    private func persistResultsLocally(contact: String) {
+        let dataAsString: String = self.JSONResponseFromSurveyResults(contact: contact)
+        let filename = getDocumentsDirectory().appendingPathComponent(self.newFileName())
+        debugPrint("File name: " + filename.absoluteString)
+        do {
+            try dataAsString.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+        } catch {
+            // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+        }
+
+    }
+    
+    private func JSONResponseFromSurveyResults(contact: String) -> String {
+        var jsonString = "{\"contact\":\"" + contact + "\",\"results\":["
+        
+        for response in self.pollResponse {
+            jsonString = jsonString + response.toJSON() + ","
+        }
+        jsonString.remove(at: jsonString.characters.index(before: jsonString.endIndex))
+        
+        jsonString = jsonString + "]}"
+        
+
+        debugPrint("JSON String: \(jsonString)")
+        print("JSON String: \(jsonString)")
+        return jsonString
     }
 
 }
