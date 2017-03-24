@@ -25,28 +25,38 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-dark" translatesAutoresizingMaskIntoConstraints="NO" id="vrj-F6-5RE">
                                 <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AgentExpo Security check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km6-Yj-iv1">
-                                <rect key="frame" x="185" y="305" width="398" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AgentExpo CYBER HEALTH CHECK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km6-Yj-iv1">
+                                <rect key="frame" x="37.5" y="321" width="693" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsY-ye-UrJ">
-                                <rect key="frame" x="185" y="685" width="398" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="235" y="685" width="298" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="uga-60-FR5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Start Survey"/>
                                 <connections>
                                     <action selector="startSurveyButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1HY-2J-gkb"/>
                                     <segue destination="nAZ-Bw-wyV" kind="presentation" identifier="Survey" modalPresentationStyle="formSheet" modalTransitionStyle="crossDissolve" id="8Aj-rL-XBS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msc-PY-47U">
-                                <rect key="frame" x="185" y="373" width="398" height="274"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msc-PY-47U">
+                                <rect key="frame" x="37.5" y="373" width="693" height="274"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="398" id="Iz8-1P-Fer"/>
+                                    <constraint firstAttribute="width" constant="693" id="Iz8-1P-Fer"/>
                                     <constraint firstAttribute="height" constant="274" id="dEq-GI-wvB"/>
                                 </constraints>
-                                <string key="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</string>
+                                <mutableString key="text">Is your agency cybersecurity savvy?  Cybersecurity protection and prevention is important and it takes more than one tool to protect your sensitive data. As breaches continue to make headlines, it’s not a question of IF a business will be attacked, but WHEN.
+ 
+So how do you know if your agency has the basic cyber protection measures that every modern business should have?  And if you have them, are they properly setup?
+ 
+Taking this 9-question multiple choice survey will help you more accurately assess your agencies vulnerability to cyber-attacks.
+ 
+ 
+It’s simple – take 5 minutes to run the Cyber Health Check. Click “Start Survey”, and find out how you score!</mutableString>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -55,16 +65,15 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vrj-F6-5RE" secondAttribute="trailing" id="J9L-6m-Zqf"/>
+                            <constraint firstItem="msc-PY-47U" firstAttribute="leading" secondItem="km6-Yj-iv1" secondAttribute="leading" id="Mc9-Hr-u93"/>
+                            <constraint firstItem="msc-PY-47U" firstAttribute="trailing" secondItem="km6-Yj-iv1" secondAttribute="trailing" id="PNJ-n3-74a"/>
                             <constraint firstItem="vrj-F6-5RE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QXK-v1-mhA"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="top" secondItem="km6-Yj-iv1" secondAttribute="bottom" constant="32" id="ahl-UT-1hy"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1f-bV-rWZ"/>
-                            <constraint firstItem="msc-PY-47U" firstAttribute="trailing" secondItem="km6-Yj-iv1" secondAttribute="trailing" id="goi-03-xfz"/>
+                            <constraint firstItem="KsY-ye-UrJ" firstAttribute="centerX" secondItem="vrj-F6-5RE" secondAttribute="centerX" id="hCy-bw-7Ns"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-2" id="iYB-Y6-zwC"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vrj-F6-5RE" secondAttribute="bottom" id="kA6-Mp-Dem"/>
-                            <constraint firstItem="KsY-ye-UrJ" firstAttribute="leading" secondItem="msc-PY-47U" secondAttribute="leading" id="kuw-Sd-K4E"/>
-                            <constraint firstItem="KsY-ye-UrJ" firstAttribute="trailing" secondItem="msc-PY-47U" secondAttribute="trailing" id="m3c-8g-38a"/>
                             <constraint firstItem="vrj-F6-5RE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mGV-TI-zQW"/>
-                            <constraint firstItem="msc-PY-47U" firstAttribute="leading" secondItem="km6-Yj-iv1" secondAttribute="leading" id="z20-48-On5"/>
                             <constraint firstItem="KsY-ye-UrJ" firstAttribute="top" secondItem="msc-PY-47U" secondAttribute="bottom" constant="38" id="zKA-aC-UBm"/>
                         </constraints>
                     </view>
