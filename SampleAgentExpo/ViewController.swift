@@ -201,6 +201,7 @@ extension ViewController: SurveySaveProtocol {
         resultController.pollResponse = self.pollResponse
         
         self.surveyIndex = -1
+        self.pollResponse = []
         self.navigationController?.pushViewController(resultController, animated: true)
     }
     
