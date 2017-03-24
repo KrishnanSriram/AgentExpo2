@@ -7,7 +7,7 @@
       "question": "Does your agency use good wireless security practices?",
       "choices": [{
         "id": "A",
-        "choice": "We provide VPN service for mobile users, we turn off file sharing, and we only use public Wi-Fi when absolutely necessary.",
+        "choice": "We provide VPN service for mobile users, we turn off file sharing and we only use public Wi-Fi when absolutely necessary.",
         "weight": "100"
       }, {
         "id": "B",
@@ -20,7 +20,7 @@
       }]
     }
   }, {
-    "title": "Security plan & Policies",
+    "title": "Security Plan & Policies",
     "id": "securityplan",
     "details": {
       "title": "QUESTION TWO",
@@ -31,7 +31,7 @@
         "weight": "100"
       }, {
         "id": "B",
-        "choice": "We have security plan but it’s not documented and we need to improve some of our security policies.",
+        "choice": "We have security plan however it’s not documented and we need to improve some of our security policies.",
         "weight": "10"
       }, {
         "id": "C",
@@ -55,19 +55,19 @@
         "weight": "10"
       }, {
         "id": "C",
-        "choice": "We have tools and systems (including anti- virus programs) that are probably out of date.",
+        "choice": "We have tools and systems (including anti-virus programs) that are probably out of date.",
         "weight": "0"
       }]
     }
   }, {
-    "title": "Accounts & Passwords audit",
+    "title": "Accounts & Passwords Audit",
     "id": "accountaudits",
     "details": {
       "title": "QUESTION FOUR",
       "question": "Does your agency audit user accounts and change passwords when someone leaves?",
       "choices": [{
         "id": "A",
-        "choice": "We routinely review user accounts to be sure they are valid, necessary, and configured properly with appropriate privileges.",
+        "choice": "We routinely review user accounts to be sure they are valid, necessary and configured properly with appropriate privileges.",
         "weight": "100"
       }, {
         "id": "B",
@@ -91,7 +91,7 @@
         "weight": "100"
       }, {
         "id": "B",
-        "choice": "We have a system in place to track outbound traffic but it is not consistently monitored.",
+        "choice": "We have a system in place to track outbound traffic however it is not consistently monitored.",
         "weight": "10"
       }, {
         "id": "C",
@@ -111,7 +111,7 @@
         "weight": "100"
       }, {
         "id": "B",
-        "choice": "We limit the use of removable media but we don’t always encrypt the data and we don’t don’t always record the access.",
+        "choice": "We limit the use of removable media.  We don’t always encrypt the data nor record the access.",
         "weight": "10"
       }, {
         "id": "C",
@@ -131,11 +131,11 @@
         "weight": "100"
       }, {
         "id": "B",
-        "choice": "We require complex passwords and we use a Password Manager but it’s not enforced or automated.",
+        "choice": "We require complex passwords and we use a Password Manager however it’s not enforced or automated.",
         "weight": "10"
       }, {
         "id": "C",
-        "choice": "We no not require complex passwords or force staff to change their passwords on a regular interval. We don’t use Password Managers or Multi-Factor authentication.",
+        "choice": "We do not require complex passwords or force staff to change their passwords on a regular interval. We don’t use Password Managers or Multi-Factor authentication.",
         "weight": "0"
       }]
     }
@@ -147,11 +147,11 @@
       "question": "Does your agency apply security practices to it’s mobile devices?",
       "choices": [{
         "id": "A",
-        "choice": "We have an MDM, we use Anti-Virus on non iPhone devices, we encrypt devices and we require passwords to unlock.",
+        "choice": "We have a MDM, we use Anti-Virus on non iPhone devices, we encrypt devices and we require passwords to unlock.",
         "weight": "100"
       }, {
         "id": "B",
-        "choice": "We have some security features in place but they aren’t automated or consistently enforced.",
+        "choice": "We have some security features in place however they are not automated or consistently enforced.",
         "weight": "10"
       }, {
         "id": "C",
@@ -160,7 +160,7 @@
       }]
     }
   }, {
-    "title": "Security Trainning",
+    "title": "Security Training",
     "id": "securitytraining",
     "details": {
       "title": "QUESTION NINE",
@@ -171,7 +171,7 @@
         "weight": "100"
       }, {
         "id": "B",
-        "choice": "We provide awareness information or training but not both.",
+        "choice": "We either provide awareness information or training, not both.",
         "weight": "10"
       }, {
         "id": "C",

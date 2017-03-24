@@ -197,26 +197,30 @@ class SFGaugeView: UIView {
             bgPath.move(to: self.centerView())
             bgPath.addArc(withCenter: self.centerView(), radius: self.bgRadius, startAngle: starttime, endAngle: endtime1, clockwise: true)
             bgPath.addLine(to: self.centerView())
-            UIColor(red: 184/255, green: 10/255, blue: 52/255, alpha: 1).setFill()
+            //UIColor(red: 184/255, green: 10/255, blue: 52/255, alpha: 1).setFill()
+            UIColor.red.setFill()
             bgPath.fill()
         }
         
         let bgPath2 = UIBezierPath()
         bgPath2.move(to: self.centerView())
         bgPath2.addArc(withCenter: self.centerView(), radius: self.bgRadius, startAngle: endtime1, endAngle: endtime2, clockwise: true)
-        UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1).setFill()
+//        UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1).setFill()
+        UIColor.yellow.setFill()
         bgPath2.fill()
         
         let bgPath3 = UIBezierPath()
         bgPath3.move(to: self.centerView())
         bgPath3.addArc(withCenter: self.centerView(), radius: self.bgRadius, startAngle: (endtime2 - 0.2), endAngle: endtime3, clockwise: true)
-        UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1).setFill()
+//        UIColor(red: 107/255, green: 107/255, blue: 107/255, alpha: 1).setFill()
+        UIColor.yellow.setFill()
         bgPath3.fill()
         
         let bgPath4 = UIBezierPath()
         bgPath4.move(to: self.centerView())
         bgPath4.addArc(withCenter: self.centerView(), radius: self.bgRadius, startAngle: endtime3, endAngle: endtime, clockwise: true)
-        UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).setFill()
+//        UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1).setFill()
+        UIColor.green.setFill()
         bgPath4.fill()
         
         
@@ -294,7 +298,7 @@ class SFGaugeView: UIView {
         translate = CGAffineTransform(translationX: (self.bounds.origin.x + self.centerView().x), y: (self.bounds.origin.y + self.centerView().y))
         needlePath.apply(translate)
 //        self.needleColor.setFill()
-        UIColor.white.setFill()
+        UIColor.black.setFill()
         needlePath.fill()
     }
     

@@ -29,7 +29,7 @@ class ResultsViewController: UIViewController {
     
         self.title = "Results"
         
-        self.topTachometer.backgroundColor = UIColor.white
+        self.topTachometer.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.0)
         self.topTachometer.bgColor = UIColor(red: CGFloat(249 / 255.0), green: CGFloat(203 / 255.0),
                                              blue: CGFloat(0 / 255.0), alpha: CGFloat(1))
         self.topTachometer.needleColor = UIColor(red: CGFloat(247 / 255.0), green: CGFloat(164 / 255.0),
@@ -137,11 +137,11 @@ class ResultsViewController: UIViewController {
     private func updateLabelsByStatus(status: String) {
         if status == "Low" {
             self.headerResultsLabel.text = "Basic"
-            self.bodyResultsLabel.text = "Your agency may be at risk from control gaps in your security practices."
+            self.bodyResultsLabel.text = "Your agency may be at risk due to control gaps in your security practices."
             self.footerResultsLabel.text = "For more information view sections within our Agency Security Guide."
         } else if status == "Medium" {
             self.headerResultsLabel.text = "Moderate"
-            self.bodyResultsLabel.text = "It looks like your agency security posture is built on a modest foundation but you could do with improvements in some areas."
+            self.bodyResultsLabel.text = "It looks like your agency security posture is built on a modest foundation however improvements could be made in some areas."
             self.footerResultsLabel.text = "Take a look at the relevant sections of our Agency Security Guide to see where you can make adjustments."
         } else {
             self.headerResultsLabel.text = "Advanced"
@@ -187,6 +187,10 @@ class ResultsViewController: UIViewController {
         debugPrint("JSON String: \(jsonString)")
         print("JSON String: \(jsonString)")
         return jsonString
+    }
+    
+    private func updateViewTheme() {
+        
     }
 
 }

@@ -76,14 +76,10 @@ class SurveyTableViewController: UITableViewController {
         
         return header
     }
-    
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return self.poll.details.title
-//    }
+
     
     override func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
         let footerView = view as! UITableViewHeaderFooterView
-//        footerView.contentView.backgroundColor = UIColor(red: 46/255, green: 190/255, blue: 206/255, alpha: 1.0)
         footerView.textLabel?.font = self.fontManager?.fontForName(name: "tableSectionFooterFont")
     }
     
@@ -92,6 +88,10 @@ class SurveyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        let index = self.dataDelegate.dataIndex()
+        if index == 0 {
+            return "Last question"
+        }
         return "\(self.dataDelegate.dataIndex()) more questions to go"
     }
     
@@ -108,8 +108,13 @@ class SurveyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.backgroundColor = UIColor(red: 43/255, green: 53/255, blue: 76/255, alpha: 1.0)
         cell.textLabel?.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
+        
+        if cell.isSelected {
+            cell.contentView.backgroundColor = UIColor(red: 41/255, green: 41/255, blue: 41/255, alpha: 1.0)
+        } else {
+            cell.backgroundColor = UIColor(red: 43/255, green: 53/255, blue: 76/255, alpha: 1.0)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -126,9 +131,15 @@ class SurveyTableViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.backgroundColor = UIColor(red: 41/255, green: 41/255, blue: 41/255, alpha: 1.0)
         let choiceDetails = self.poll.details.choices[indexPath.row]
-//        self.addToAnalytics(questionId: self.poll.id, choice: choiceDetails.choiceId)
+        self.addToAnalytics(questionId: self.poll.id, choice: choiceDetails.choiceId)
         
         self.surveyDelegate.saveSurvey(poll: self.poll, choiceId: choiceDetails.choiceId)
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            self.checkToReset()
+        }
     }
     
     //MARK: - Action methods
@@ -138,10 +149,9 @@ class SurveyTableViewController: UITableViewController {
             let (poll, lastItem) = self.dataDelegate.loadNext()
             self.poll = poll
             self.isLastItem = lastItem
-            self.tableView.reloadData()
             self.title = self.poll.title
             self.updateBarButtons()
-            animateTable()
+            self.animateTable()
         } else {
             self.submitButtonTapped(sender: sender)
         }
@@ -152,10 +162,9 @@ class SurveyTableViewController: UITableViewController {
         let (poll, lastItem) = self.dataDelegate.loadPrev()
         self.poll = poll
         self.isLastItem = lastItem
-        self.tableView.reloadData()
         self.title = self.poll.title
         self.updateBarButtons()
-        animateTable()
+        self.animateTable()
     }
     
     @IBAction func submitButtonTapped(sender: UIBarButtonItem) {
@@ -214,6 +223,7 @@ class SurveyTableViewController: UITableViewController {
     //MARK: - Animation support
     func animateTable() {
         tableView.reloadData()
+        self.preSelectChoiceForPoll()
         
         let cells = tableView.visibleCells
         let tableHeight: CGFloat = tableView.bounds.size.height
@@ -234,6 +244,42 @@ class SurveyTableViewController: UITableViewController {
             
             index += 1
         }
+    }
+    
+    //MARK: select table cell
+    func preSelectChoiceForPoll() {
+        if let choice = self.dataDelegate.selectedChoiceForPoll(pollId: self.poll.id) {
+            var selectedIndex: IndexPath!
+            
+            switch choice {
+            case "A":
+                selectedIndex = IndexPath(row: 0, section: 0)
+            case "B":
+                selectedIndex = IndexPath(row: 1, section: 0)
+            case "C":
+                selectedIndex = IndexPath(row: 2, section: 0)
+            default:
+                selectedIndex = IndexPath(row: 0, section: 0)
+            }
+    
+            self.tableView.selectRow(at: selectedIndex, animated: true, scrollPosition: .none)
+        }
+    }
+    
+    func checkToReset() {
+        let alertController = UIAlertController(title: "Start over again?", message: "Do you want to restart quiz?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (alert) in
+            self.resetResponse()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func resetResponse() {
+        self.surveyDelegate.resetPoll()
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

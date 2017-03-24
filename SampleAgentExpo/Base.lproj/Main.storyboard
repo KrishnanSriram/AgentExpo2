@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-dark" translatesAutoresizingMaskIntoConstraints="NO" id="vrj-F6-5RE">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AgentExpo Security check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="km6-Yj-iv1">
                                 <rect key="frame" x="185" y="305" width="398" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
@@ -51,12 +54,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vrj-F6-5RE" secondAttribute="trailing" id="J9L-6m-Zqf"/>
+                            <constraint firstItem="vrj-F6-5RE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QXK-v1-mhA"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="top" secondItem="km6-Yj-iv1" secondAttribute="bottom" constant="32" id="ahl-UT-1hy"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c1f-bV-rWZ"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="trailing" secondItem="km6-Yj-iv1" secondAttribute="trailing" id="goi-03-xfz"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-2" id="iYB-Y6-zwC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vrj-F6-5RE" secondAttribute="bottom" id="kA6-Mp-Dem"/>
                             <constraint firstItem="KsY-ye-UrJ" firstAttribute="leading" secondItem="msc-PY-47U" secondAttribute="leading" id="kuw-Sd-K4E"/>
                             <constraint firstItem="KsY-ye-UrJ" firstAttribute="trailing" secondItem="msc-PY-47U" secondAttribute="trailing" id="m3c-8g-38a"/>
+                            <constraint firstItem="vrj-F6-5RE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mGV-TI-zQW"/>
                             <constraint firstItem="msc-PY-47U" firstAttribute="leading" secondItem="km6-Yj-iv1" secondAttribute="leading" id="z20-48-On5"/>
                             <constraint firstItem="KsY-ye-UrJ" firstAttribute="top" secondItem="msc-PY-47U" secondAttribute="bottom" constant="38" id="zKA-aC-UBm"/>
                         </constraints>
@@ -132,9 +139,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-dark" translatesAutoresizingMaskIntoConstraints="NO" id="cZW-Gt-ne3">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nH-h1-4zV" customClass="SFGaugeView" customModule="SampleAgentExpo" customModuleProvider="target">
                                 <rect key="frame" x="217" y="215" width="335" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="335" id="B3F-UG-x2J"/>
                                     <constraint firstAttribute="height" constant="250" id="S8z-bB-zFk"/>
@@ -143,7 +154,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0A-la-BB2">
                                 <rect key="frame" x="59" y="84" width="650" height="54"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="45"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep up the great work and continue to remain vigilant about security risks as your agency grows and evolves" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-xy-6VC">
@@ -152,11 +163,11 @@
                                     <constraint firstAttribute="height" constant="108" id="3Kr-Xa-wsJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNu-pd-3Xf">
-                                <rect key="frame" x="329" y="689" width="111" height="36"/>
+                                <rect key="frame" x="329" y="688" width="111" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="111" id="SVR-74-uAb"/>
                                     <constraint firstAttribute="height" constant="36" id="vDq-y0-l3S"/>
@@ -167,25 +178,25 @@
                                     <action selector="subscribeButtonTappedWithSender:" destination="9Za-Db-v7y" eventType="touchDown" id="FV2-lK-yfD"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your security level IS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mte-2l-edR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="your security level Is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mte-2l-edR">
                                 <rect key="frame" x="20" y="139" width="728" height="71"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="71" id="n4a-f0-fby"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advanced" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIi-od-7y2">
                                 <rect key="frame" x="30" y="485" width="708" height="53"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need help protecting your technology assets?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGd-Kh-1fd">
-                                <rect key="frame" x="30" y="643" width="708" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Need help protecting your technology assets?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGd-Kh-1fd">
+                                <rect key="frame" x="30" y="643" width="708" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iL8-V5-a31">
@@ -195,7 +206,7 @@
                                     <constraint firstAttribute="height" constant="21" id="EKR-jV-XEq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sap-KX-Kv9">
@@ -205,15 +216,18 @@
                                     <constraint firstAttribute="height" constant="21" id="qu2-1c-DrC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iL8-V5-a31" firstAttribute="bottom" secondItem="0nH-h1-4zV" secondAttribute="bottom" id="26s-Zo-Zgt"/>
+                            <constraint firstItem="0MO-CE-tRT" firstAttribute="top" secondItem="cZW-Gt-ne3" secondAttribute="bottom" id="2KR-vE-FoK"/>
                             <constraint firstItem="y0A-la-BB2" firstAttribute="top" secondItem="F1X-P6-WMy" secondAttribute="bottom" constant="20" id="7UP-gJ-mkb"/>
+                            <constraint firstItem="cZW-Gt-ne3" firstAttribute="leading" secondItem="Qkj-ZF-7RX" secondAttribute="leadingMargin" constant="-20" id="7cs-4B-LTk"/>
                             <constraint firstItem="pIi-od-7y2" firstAttribute="top" secondItem="0nH-h1-4zV" secondAttribute="bottom" constant="20" id="82T-gR-Gas"/>
+                            <constraint firstItem="cZW-Gt-ne3" firstAttribute="top" secondItem="Qkj-ZF-7RX" secondAttribute="topMargin" id="GpR-RL-N60"/>
                             <constraint firstItem="0nH-h1-4zV" firstAttribute="centerX" secondItem="Qkj-ZF-7RX" secondAttribute="centerX" id="Jss-1b-B7q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kGd-Kh-1fd" secondAttribute="trailing" constant="10" id="POx-1K-80J"/>
                             <constraint firstItem="kGd-Kh-1fd" firstAttribute="leading" secondItem="Qkj-ZF-7RX" secondAttribute="leadingMargin" constant="10" id="QYc-RV-yO0"/>
@@ -234,6 +248,7 @@
                             <constraint firstItem="Mte-2l-edR" firstAttribute="top" secondItem="y0A-la-BB2" secondAttribute="bottom" constant="0.5" id="nc9-z5-5xu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y0A-la-BB2" secondAttribute="trailing" constant="39" id="sgN-tI-RIG"/>
                             <constraint firstItem="pIi-od-7y2" firstAttribute="leading" secondItem="Qkj-ZF-7RX" secondAttribute="leadingMargin" constant="10" id="wAk-0C-hCh"/>
+                            <constraint firstItem="cZW-Gt-ne3" firstAttribute="trailing" secondItem="Qkj-ZF-7RX" secondAttribute="trailingMargin" constant="20" id="wGB-hv-Irg"/>
                         </constraints>
                     </view>
                     <connections>
@@ -270,4 +285,7 @@
             <point key="canvasLocation" x="139.84375" y="138.8671875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg-dark" width="1260" height="900"/>
+    </resources>
 </document>

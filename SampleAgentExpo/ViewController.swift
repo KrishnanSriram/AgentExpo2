@@ -15,11 +15,13 @@ protocol SurveyLoadProtocol {
     func loadPrev() -> (poll:Poll, isLast: Bool)
     func loadDataForSurvey() -> (poll:Poll, isLast: Bool)
     func dataIndex() -> Int
+    func selectedChoiceForPoll(pollId: String) -> String?
 }
 
 protocol SurveySaveProtocol {
     func saveSurvey(poll: Poll, choiceId: String)
     func submitPoll()
+    func resetPoll()
 }
 
 class ViewController: BaseViewController {
@@ -141,6 +143,16 @@ extension ViewController: SurveyLoadProtocol {
         }
         return (poll: appDelegate.applicationManager.agentSecurityPoll[self.surveyIndex], isLast: isLast)
     }
+    
+    func selectedChoiceForPoll(pollId: String) -> String? {
+        for surveyResponse in self.pollResponse {
+            if surveyResponse.poll_id == pollId {
+                return surveyResponse.choice_id
+            }
+        }
+        
+        return nil
+    }
 }
 
 extension ViewController: UIViewControllerTransitioningDelegate {
@@ -190,6 +202,11 @@ extension ViewController: SurveySaveProtocol {
         
         self.surveyIndex = -1
         self.navigationController?.pushViewController(resultController, animated: true)
+    }
+    
+    func resetPoll() {
+        self.surveyIndex = -1
+        self.pollResponse = []
     }
     
     private func hasResponseForPoll(pollId: String) -> Bool {
